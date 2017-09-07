@@ -35,19 +35,22 @@ public class HazelcastConfiguration {
      *
      * @return Configuration for the Hazelcast instance
      */
-    @Bean
-    public Config config() {
+    
+    /**
+    * @Bean
+    * public Config config() {
 
-        Config config = new Config();
+    *   Config config = new Config();
 
-        JoinConfig joinConfig = config.getNetworkConfig().getJoin();
+    *   JoinConfig joinConfig = config.getNetworkConfig().getJoin();
 
-        joinConfig.getMulticastConfig().setEnabled(false);
-        joinConfig.getTcpIpConfig().setEnabled(true).setMembers(singletonList("127.0.0.1"));
+    *   joinConfig.getMulticastConfig().setEnabled(false);
+    *   joinConfig.getTcpIpConfig().setEnabled(true).setMembers(singletonList("127.0.0.1"));
 
-        return config;
-    }
-
+    *   return config;
+    * }
+    */
+    
     /**
      * Create a web filter. Parameterize this with two properties,
      *
